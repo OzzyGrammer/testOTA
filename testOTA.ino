@@ -9,10 +9,10 @@ const char * password = "12345678";
 
 
 String FirmwareVer = {
-  "2.2"
+  "2.3"
 };
-#define URL_fw_Version "https://github.com/OzzyGrammer/testOTA/bin_version.txt"
-#define URL_fw_Bin "https://github.com/OzzyGrammer/testOTA/testOTA/fw.bin"
+#define URL_fw_Version "https://github.com/OzzyGrammer/testOTA/master/bin_version.txt"
+#define URL_fw_Bin "https://github.com/OzzyGrammer/testOTA/testOTA/master/fw.bin"
 
 //#define URL_fw_Version "http://cade-make.000webhostapp.com/version.txt"
 //#define URL_fw_Bin "http://cade-make.000webhostapp.com/firmware.bin"
@@ -86,7 +86,7 @@ void setup() {
 }
 void loop() {
   if (button_boot.pressed) { //to connect wifi via Android esp touch app 
-    Serial.println("Firmware update Starting..");
+    Serial.println("Firmware update Starting .. changed version!");
     firmwareUpdate();
     button_boot.pressed = false;
   }
